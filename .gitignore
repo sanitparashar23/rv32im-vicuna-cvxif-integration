@@ -1,0 +1,52 @@
+# Cadence Xcelium simulation artifacts
+xrun.log
+xrun.history
+xcelium.d/
+INCA_libs/
+*.shm/
+*.trn
+waves.shm/
+*.key
+*.diag
+simv*
+csrc/
+ucli.key
+.simvision/
+*.vcd
+*.fsdb
+*.wlf
+
+# Cadence Genus synthesis artifacts
+*.rpt
+genus.log
+genus_cmd.log
+fv/
+*.db
+*.ddc
+work_genus/
+*.pl
+insight.log
+*.cmd.rpt
+
+# General EDA / simulation clutter
+*.log
+*.out
+*.o
+*.vpd
+*.daidir/
+transcript
+work/
+*.wdb
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Python (if you use scripts for automation)
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
