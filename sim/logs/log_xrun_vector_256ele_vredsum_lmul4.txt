@@ -1,0 +1,1847 @@
+[2026-05-06 08:16:14 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-f' 'filelist.f' '+define+IMEM_HEX=\"i_mem.hex\"' '+define+DMEM_HEX=\"d_mem.hex\"' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on May 06, 2026 at 04:16:14 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+  adder u_pc4(
+            |
+xmelab: *W,CUVWSP (./rv32im.sv,150|12): 4 output ports were not connected:
+xmelab: (./adder.sv,9): overflow
+xmelab: (./adder.sv,10): carry
+xmelab: (./adder.sv,11): negative
+xmelab: (./adder.sv,12): zero
+
+  adder u_pcimm(
+              |
+xmelab: *W,CUVWSP (./rv32im.sv,346|14): 4 output ports were not connected:
+xmelab: (./adder.sv,9): overflow
+xmelab: (./adder.sv,10): carry
+xmelab: (./adder.sv,11): negative
+xmelab: (./adder.sv,12): zero
+
+    ) u_vicuna (
+             |
+xmelab: *W,CUVWSP (./vicuna_wrapper.sv,195|13): 4 output ports were not connected:
+xmelab: (./vproc_core.sv,50): csr_vlenb_o
+xmelab: (./vproc_core.sv,54): csr_vxrm_o
+xmelab: (./vproc_core.sv,57): csr_vxsat_o
+xmelab: (./vproc_core.sv,61): pend_vreg_wr_map_o
+
+	Top level design units:
+		my_pkg
+		$unit_0x7695c681
+		divider_1c
+		multiplier_1c
+		rv32im_top_tb
+    .opF(InstrF[6:0]),          // opcode in IF
+              |
+xmelab: *W,ENUMERR (./rv32im.sv,114|14): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    .op(InstrD[6:0]),             // Op Codes
+             |
+xmelab: *W,ENUMERR (./rv32im.sv,178|13): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+Loading snapshot worklib.divider_1c:sv .................... Done
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,PRPASZ: Packed array at "rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state" of 6535 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 6535 rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state' or 'setenv SHM_PACKED_LIMIT 6535' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_q" of 6535 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 6535 rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_q' or 'setenv SHM_PACKED_LIMIT 6535' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_d" of 6535 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 6535 rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_d' or 'setenv SHM_PACKED_LIMIT 6535' to adjust limit.
+[IMEM] Loaded OK. IMEM[0]=80000537
+[IMEM] Loaded OK. IMEM[0]=80000537 (expect 80000537)
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 3600 ns | Instr: 012077d7 | VL: 0
+[VICUNA RETIRE] Time: 4000 ns | Instruction ID 0 complete
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 4400 ns | Instr: 5e003257 | VL: 16
+[VICUNA RETIRE] Time: 4600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 7400 ns | Port 0 Wrote to v4
+                Payload: 00000000000000000000000000000000
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 8200 ns | Port 0 Wrote to v5
+                Payload: 00000000000000000000000000000000
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 9000 ns | Port 0 Wrote to v6
+                Payload: 00000000000000000000000000000000
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 9800 ns | Port 0 Wrote to v7
+                Payload: 00000000000000000000000000000000
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 10000 ns | Instr: 5e003c57 | VL: 16
+[VICUNA RETIRE] Time: 10200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 13000 ns | Port 0 Wrote to v24
+                Payload: 00000000000000000000000000000000
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 13800 ns | Port 0 Wrote to v25
+                Payload: 00000000000000000000000000000000
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 14600 ns | Port 0 Wrote to v26
+                Payload: 00000000000000000000000000000000
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 15400 ns | Port 0 Wrote to v27
+                Payload: 00000000000000000000000000000000
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 15600 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 17400 ns |  READ @ Addr: 80000010
+[VICUNA MEMORY] Time: 17600 ns |  READ @ Addr: 80000014
+[VICUNA MEMORY] Time: 17800 ns |  READ @ Addr: 80000018
+[VICUNA MEMORY] Time: 18000 ns |  READ @ Addr: 8000001c
+[VICUNA MEMORY] Time: 18200 ns |  READ @ Addr: 80000020
+[VICUNA MEMORY] Time: 18400 ns |  READ @ Addr: 80000024
+[VICUNA MEMORY] Time: 18600 ns |  READ @ Addr: 80000028
+=======================================================
+[VICUNA VAULT]  Time: 18600 ns | Port 0 Wrote to v8
+                Payload: 00000004000000030000000200000001
+=======================================================
+[VICUNA MEMORY] Time: 18800 ns |  READ @ Addr: 8000002c
+[VICUNA MEMORY] Time: 19000 ns |  READ @ Addr: 80000030
+[VICUNA MEMORY] Time: 19200 ns |  READ @ Addr: 80000034
+[VICUNA MEMORY] Time: 19400 ns |  READ @ Addr: 80000038
+=======================================================
+[VICUNA VAULT]  Time: 19400 ns | Port 0 Wrote to v9
+                Payload: 00000008000000070000000600000005
+=======================================================
+[VICUNA MEMORY] Time: 19600 ns |  READ @ Addr: 8000003c
+[VICUNA MEMORY] Time: 19800 ns |  READ @ Addr: 80000040
+[VICUNA MEMORY] Time: 20000 ns |  READ @ Addr: 80000044
+[VICUNA MEMORY] Time: 20200 ns |  READ @ Addr: 80000048
+=======================================================
+[VICUNA VAULT]  Time: 20200 ns | Port 0 Wrote to v10
+                Payload: 0000000c0000000b0000000a00000009
+=======================================================
+[VICUNA MEMORY] Time: 20400 ns |  READ @ Addr: 8000004c
+[VICUNA RETIRE] Time: 20800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 21000 ns | Port 0 Wrote to v11
+                Payload: 000000100000000f0000000e0000000d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 21200 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 23000 ns |  READ @ Addr: 80000410
+[VICUNA MEMORY] Time: 23200 ns |  READ @ Addr: 80000414
+[VICUNA MEMORY] Time: 23400 ns |  READ @ Addr: 80000418
+[VICUNA MEMORY] Time: 23600 ns |  READ @ Addr: 8000041c
+[VICUNA MEMORY] Time: 23800 ns |  READ @ Addr: 80000420
+[VICUNA MEMORY] Time: 24000 ns |  READ @ Addr: 80000424
+[VICUNA MEMORY] Time: 24200 ns |  READ @ Addr: 80000428
+=======================================================
+[VICUNA VAULT]  Time: 24200 ns | Port 0 Wrote to v12
+                Payload: 00000004000000030000000200000001
+=======================================================
+[VICUNA MEMORY] Time: 24400 ns |  READ @ Addr: 8000042c
+[VICUNA MEMORY] Time: 24600 ns |  READ @ Addr: 80000430
+[VICUNA MEMORY] Time: 24800 ns |  READ @ Addr: 80000434
+[VICUNA MEMORY] Time: 25000 ns |  READ @ Addr: 80000438
+=======================================================
+[VICUNA VAULT]  Time: 25000 ns | Port 0 Wrote to v13
+                Payload: 00000008000000070000000600000005
+=======================================================
+[VICUNA MEMORY] Time: 25200 ns |  READ @ Addr: 8000043c
+[VICUNA MEMORY] Time: 25400 ns |  READ @ Addr: 80000440
+[VICUNA MEMORY] Time: 25600 ns |  READ @ Addr: 80000444
+[VICUNA MEMORY] Time: 25800 ns |  READ @ Addr: 80000448
+=======================================================
+[VICUNA VAULT]  Time: 25800 ns | Port 0 Wrote to v14
+                Payload: 0000000c0000000b0000000a00000009
+=======================================================
+[VICUNA MEMORY] Time: 26000 ns |  READ @ Addr: 8000044c
+[VICUNA RETIRE] Time: 26400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 26600 ns | Port 0 Wrote to v15
+                Payload: 000000100000000f0000000e0000000d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 26800 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 27000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 30000 ns | Port 0 Wrote to v16
+                Payload: 00000010000000090000000400000001
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 30800 ns | Port 0 Wrote to v17
+                Payload: 00000040000000310000002400000019
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 31600 ns | Port 0 Wrote to v18
+                Payload: 00000090000000790000006400000051
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 32400 ns | Port 0 Wrote to v19
+                Payload: 00000100000000e1000000c4000000a9
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 32600 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 32800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 35600 ns | Port 0 Wrote to v4
+                Payload: 00000010000000090000000400000001
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 36400 ns | Port 0 Wrote to v5
+                Payload: 00000040000000310000002400000019
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 37200 ns | Port 0 Wrote to v6
+                Payload: 00000090000000790000006400000051
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 38000 ns | Port 0 Wrote to v7
+                Payload: 00000100000000e1000000c4000000a9
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 38200 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 40000 ns |  READ @ Addr: 80000050
+[VICUNA MEMORY] Time: 40200 ns |  READ @ Addr: 80000054
+[VICUNA MEMORY] Time: 40400 ns |  READ @ Addr: 80000058
+[VICUNA MEMORY] Time: 40600 ns |  READ @ Addr: 8000005c
+[VICUNA MEMORY] Time: 40800 ns |  READ @ Addr: 80000060
+[VICUNA MEMORY] Time: 41000 ns |  READ @ Addr: 80000064
+[VICUNA MEMORY] Time: 41200 ns |  READ @ Addr: 80000068
+=======================================================
+[VICUNA VAULT]  Time: 41200 ns | Port 0 Wrote to v8
+                Payload: 00000014000000130000001200000011
+=======================================================
+[VICUNA MEMORY] Time: 41400 ns |  READ @ Addr: 8000006c
+[VICUNA MEMORY] Time: 41600 ns |  READ @ Addr: 80000070
+[VICUNA MEMORY] Time: 41800 ns |  READ @ Addr: 80000074
+[VICUNA MEMORY] Time: 42000 ns |  READ @ Addr: 80000078
+=======================================================
+[VICUNA VAULT]  Time: 42000 ns | Port 0 Wrote to v9
+                Payload: 00000018000000170000001600000015
+=======================================================
+[VICUNA MEMORY] Time: 42200 ns |  READ @ Addr: 8000007c
+[VICUNA MEMORY] Time: 42400 ns |  READ @ Addr: 80000080
+[VICUNA MEMORY] Time: 42600 ns |  READ @ Addr: 80000084
+[VICUNA MEMORY] Time: 42800 ns |  READ @ Addr: 80000088
+=======================================================
+[VICUNA VAULT]  Time: 42800 ns | Port 0 Wrote to v10
+                Payload: 0000001c0000001b0000001a00000019
+=======================================================
+[VICUNA MEMORY] Time: 43000 ns |  READ @ Addr: 8000008c
+[VICUNA RETIRE] Time: 43400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 43600 ns | Port 0 Wrote to v11
+                Payload: 000000200000001f0000001e0000001d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 43800 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 45600 ns |  READ @ Addr: 80000450
+[VICUNA MEMORY] Time: 45800 ns |  READ @ Addr: 80000454
+[VICUNA MEMORY] Time: 46000 ns |  READ @ Addr: 80000458
+[VICUNA MEMORY] Time: 46200 ns |  READ @ Addr: 8000045c
+[VICUNA MEMORY] Time: 46400 ns |  READ @ Addr: 80000460
+[VICUNA MEMORY] Time: 46600 ns |  READ @ Addr: 80000464
+[VICUNA MEMORY] Time: 46800 ns |  READ @ Addr: 80000468
+=======================================================
+[VICUNA VAULT]  Time: 46800 ns | Port 0 Wrote to v12
+                Payload: 00000014000000130000001200000011
+=======================================================
+[VICUNA MEMORY] Time: 47000 ns |  READ @ Addr: 8000046c
+[VICUNA MEMORY] Time: 47200 ns |  READ @ Addr: 80000470
+[VICUNA MEMORY] Time: 47400 ns |  READ @ Addr: 80000474
+[VICUNA MEMORY] Time: 47600 ns |  READ @ Addr: 80000478
+=======================================================
+[VICUNA VAULT]  Time: 47600 ns | Port 0 Wrote to v13
+                Payload: 00000018000000170000001600000015
+=======================================================
+[VICUNA MEMORY] Time: 47800 ns |  READ @ Addr: 8000047c
+[VICUNA MEMORY] Time: 48000 ns |  READ @ Addr: 80000480
+[VICUNA MEMORY] Time: 48200 ns |  READ @ Addr: 80000484
+[VICUNA MEMORY] Time: 48400 ns |  READ @ Addr: 80000488
+=======================================================
+[VICUNA VAULT]  Time: 48400 ns | Port 0 Wrote to v14
+                Payload: 0000001c0000001b0000001a00000019
+=======================================================
+[VICUNA MEMORY] Time: 48600 ns |  READ @ Addr: 8000048c
+[VICUNA RETIRE] Time: 49000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 49200 ns | Port 0 Wrote to v15
+                Payload: 000000200000001f0000001e0000001d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 49400 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 49600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 52600 ns | Port 0 Wrote to v16
+                Payload: 00000190000001690000014400000121
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 53400 ns | Port 0 Wrote to v17
+                Payload: 0000024000000211000001e4000001b9
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 54200 ns | Port 0 Wrote to v18
+                Payload: 00000310000002d9000002a400000271
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 55000 ns | Port 0 Wrote to v19
+                Payload: 00000400000003c10000038400000349
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 55200 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 55400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 58200 ns | Port 0 Wrote to v4
+                Payload: 000001a0000001720000014800000122
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 59000 ns | Port 0 Wrote to v5
+                Payload: 000002800000024200000208000001d2
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 59800 ns | Port 0 Wrote to v6
+                Payload: 000003a00000035200000308000002c2
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 60600 ns | Port 0 Wrote to v7
+                Payload: 00000500000004a200000448000003f2
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 60800 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 62600 ns |  READ @ Addr: 80000090
+[VICUNA MEMORY] Time: 62800 ns |  READ @ Addr: 80000094
+[VICUNA MEMORY] Time: 63000 ns |  READ @ Addr: 80000098
+[VICUNA MEMORY] Time: 63200 ns |  READ @ Addr: 8000009c
+[VICUNA MEMORY] Time: 63400 ns |  READ @ Addr: 800000a0
+[VICUNA MEMORY] Time: 63600 ns |  READ @ Addr: 800000a4
+[VICUNA MEMORY] Time: 63800 ns |  READ @ Addr: 800000a8
+=======================================================
+[VICUNA VAULT]  Time: 63800 ns | Port 0 Wrote to v8
+                Payload: 00000024000000230000002200000021
+=======================================================
+[VICUNA MEMORY] Time: 64000 ns |  READ @ Addr: 800000ac
+[VICUNA MEMORY] Time: 64200 ns |  READ @ Addr: 800000b0
+[VICUNA MEMORY] Time: 64400 ns |  READ @ Addr: 800000b4
+[VICUNA MEMORY] Time: 64600 ns |  READ @ Addr: 800000b8
+=======================================================
+[VICUNA VAULT]  Time: 64600 ns | Port 0 Wrote to v9
+                Payload: 00000028000000270000002600000025
+=======================================================
+[VICUNA MEMORY] Time: 64800 ns |  READ @ Addr: 800000bc
+[VICUNA MEMORY] Time: 65000 ns |  READ @ Addr: 800000c0
+[VICUNA MEMORY] Time: 65200 ns |  READ @ Addr: 800000c4
+[VICUNA MEMORY] Time: 65400 ns |  READ @ Addr: 800000c8
+=======================================================
+[VICUNA VAULT]  Time: 65400 ns | Port 0 Wrote to v10
+                Payload: 0000002c0000002b0000002a00000029
+=======================================================
+[VICUNA MEMORY] Time: 65600 ns |  READ @ Addr: 800000cc
+[VICUNA RETIRE] Time: 66000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 66200 ns | Port 0 Wrote to v11
+                Payload: 000000300000002f0000002e0000002d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 66400 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 68200 ns |  READ @ Addr: 80000490
+[VICUNA MEMORY] Time: 68400 ns |  READ @ Addr: 80000494
+[VICUNA MEMORY] Time: 68600 ns |  READ @ Addr: 80000498
+[VICUNA MEMORY] Time: 68800 ns |  READ @ Addr: 8000049c
+[VICUNA MEMORY] Time: 69000 ns |  READ @ Addr: 800004a0
+[VICUNA MEMORY] Time: 69200 ns |  READ @ Addr: 800004a4
+[VICUNA MEMORY] Time: 69400 ns |  READ @ Addr: 800004a8
+=======================================================
+[VICUNA VAULT]  Time: 69400 ns | Port 0 Wrote to v12
+                Payload: 00000024000000230000002200000021
+=======================================================
+[VICUNA MEMORY] Time: 69600 ns |  READ @ Addr: 800004ac
+[VICUNA MEMORY] Time: 69800 ns |  READ @ Addr: 800004b0
+[VICUNA MEMORY] Time: 70000 ns |  READ @ Addr: 800004b4
+[VICUNA MEMORY] Time: 70200 ns |  READ @ Addr: 800004b8
+=======================================================
+[VICUNA VAULT]  Time: 70200 ns | Port 0 Wrote to v13
+                Payload: 00000028000000270000002600000025
+=======================================================
+[VICUNA MEMORY] Time: 70400 ns |  READ @ Addr: 800004bc
+[VICUNA MEMORY] Time: 70600 ns |  READ @ Addr: 800004c0
+[VICUNA MEMORY] Time: 70800 ns |  READ @ Addr: 800004c4
+[VICUNA MEMORY] Time: 71000 ns |  READ @ Addr: 800004c8
+=======================================================
+[VICUNA VAULT]  Time: 71000 ns | Port 0 Wrote to v14
+                Payload: 0000002c0000002b0000002a00000029
+=======================================================
+[VICUNA MEMORY] Time: 71200 ns |  READ @ Addr: 800004cc
+[VICUNA RETIRE] Time: 71600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 71800 ns | Port 0 Wrote to v15
+                Payload: 000000300000002f0000002e0000002d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 72000 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 72200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 75200 ns | Port 0 Wrote to v16
+                Payload: 00000510000004c90000048400000441
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 76000 ns | Port 0 Wrote to v17
+                Payload: 00000640000005f1000005a400000559
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 76800 ns | Port 0 Wrote to v18
+                Payload: 0000079000000739000006e400000691
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 77600 ns | Port 0 Wrote to v19
+                Payload: 00000900000008a100000844000007e9
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 77800 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 78000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 80800 ns | Port 0 Wrote to v4
+                Payload: 000006b00000063b000005cc00000563
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 81600 ns | Port 0 Wrote to v5
+                Payload: 000008c000000833000007ac0000072b
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 82400 ns | Port 0 Wrote to v6
+                Payload: 00000b3000000a8b000009ec00000953
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 83200 ns | Port 0 Wrote to v7
+                Payload: 00000e0000000d4300000c8c00000bdb
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 83400 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 85200 ns |  READ @ Addr: 800000d0
+[VICUNA MEMORY] Time: 85400 ns |  READ @ Addr: 800000d4
+[VICUNA MEMORY] Time: 85600 ns |  READ @ Addr: 800000d8
+[VICUNA MEMORY] Time: 85800 ns |  READ @ Addr: 800000dc
+[VICUNA MEMORY] Time: 86000 ns |  READ @ Addr: 800000e0
+[VICUNA MEMORY] Time: 86200 ns |  READ @ Addr: 800000e4
+[VICUNA MEMORY] Time: 86400 ns |  READ @ Addr: 800000e8
+=======================================================
+[VICUNA VAULT]  Time: 86400 ns | Port 0 Wrote to v8
+                Payload: 00000034000000330000003200000031
+=======================================================
+[VICUNA MEMORY] Time: 86600 ns |  READ @ Addr: 800000ec
+[VICUNA MEMORY] Time: 86800 ns |  READ @ Addr: 800000f0
+[VICUNA MEMORY] Time: 87000 ns |  READ @ Addr: 800000f4
+[VICUNA MEMORY] Time: 87200 ns |  READ @ Addr: 800000f8
+=======================================================
+[VICUNA VAULT]  Time: 87200 ns | Port 0 Wrote to v9
+                Payload: 00000038000000370000003600000035
+=======================================================
+[VICUNA MEMORY] Time: 87400 ns |  READ @ Addr: 800000fc
+[VICUNA MEMORY] Time: 87600 ns |  READ @ Addr: 80000100
+[VICUNA MEMORY] Time: 87800 ns |  READ @ Addr: 80000104
+[VICUNA MEMORY] Time: 88000 ns |  READ @ Addr: 80000108
+=======================================================
+[VICUNA VAULT]  Time: 88000 ns | Port 0 Wrote to v10
+                Payload: 0000003c0000003b0000003a00000039
+=======================================================
+[VICUNA MEMORY] Time: 88200 ns |  READ @ Addr: 8000010c
+[VICUNA RETIRE] Time: 88600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 88800 ns | Port 0 Wrote to v11
+                Payload: 000000400000003f0000003e0000003d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 89000 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 90800 ns |  READ @ Addr: 800004d0
+[VICUNA MEMORY] Time: 91000 ns |  READ @ Addr: 800004d4
+[VICUNA MEMORY] Time: 91200 ns |  READ @ Addr: 800004d8
+[VICUNA MEMORY] Time: 91400 ns |  READ @ Addr: 800004dc
+[VICUNA MEMORY] Time: 91600 ns |  READ @ Addr: 800004e0
+[VICUNA MEMORY] Time: 91800 ns |  READ @ Addr: 800004e4
+[VICUNA MEMORY] Time: 92000 ns |  READ @ Addr: 800004e8
+=======================================================
+[VICUNA VAULT]  Time: 92000 ns | Port 0 Wrote to v12
+                Payload: 00000034000000330000003200000031
+=======================================================
+[VICUNA MEMORY] Time: 92200 ns |  READ @ Addr: 800004ec
+[VICUNA MEMORY] Time: 92400 ns |  READ @ Addr: 800004f0
+[VICUNA MEMORY] Time: 92600 ns |  READ @ Addr: 800004f4
+[VICUNA MEMORY] Time: 92800 ns |  READ @ Addr: 800004f8
+=======================================================
+[VICUNA VAULT]  Time: 92800 ns | Port 0 Wrote to v13
+                Payload: 00000038000000370000003600000035
+=======================================================
+[VICUNA MEMORY] Time: 93000 ns |  READ @ Addr: 800004fc
+[VICUNA MEMORY] Time: 93200 ns |  READ @ Addr: 80000500
+[VICUNA MEMORY] Time: 93400 ns |  READ @ Addr: 80000504
+[VICUNA MEMORY] Time: 93600 ns |  READ @ Addr: 80000508
+=======================================================
+[VICUNA VAULT]  Time: 93600 ns | Port 0 Wrote to v14
+                Payload: 0000003c0000003b0000003a00000039
+=======================================================
+[VICUNA MEMORY] Time: 93800 ns |  READ @ Addr: 8000050c
+[VICUNA RETIRE] Time: 94200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 94400 ns | Port 0 Wrote to v15
+                Payload: 000000400000003f0000003e0000003d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 94600 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 94800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 97800 ns | Port 0 Wrote to v16
+                Payload: 00000a9000000a29000009c400000961
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 98600 ns | Port 0 Wrote to v17
+                Payload: 00000c4000000bd100000b6400000af9
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 99400 ns | Port 0 Wrote to v18
+                Payload: 00000e1000000d9900000d2400000cb1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 100200 ns | Port 0 Wrote to v19
+                Payload: 0000100000000f8100000f0400000e89
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 100400 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 100600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 103400 ns | Port 0 Wrote to v4
+                Payload: 000011400000106400000f9000000ec4
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 104200 ns | Port 0 Wrote to v5
+                Payload: 00001500000014040000131000001224
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 105000 ns | Port 0 Wrote to v6
+                Payload: 00001940000018240000171000001604
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 105800 ns | Port 0 Wrote to v7
+                Payload: 00001e0000001cc400001b9000001a64
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 106000 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 107800 ns |  READ @ Addr: 80000110
+[VICUNA MEMORY] Time: 108000 ns |  READ @ Addr: 80000114
+[VICUNA MEMORY] Time: 108200 ns |  READ @ Addr: 80000118
+[VICUNA MEMORY] Time: 108400 ns |  READ @ Addr: 8000011c
+[VICUNA MEMORY] Time: 108600 ns |  READ @ Addr: 80000120
+[VICUNA MEMORY] Time: 108800 ns |  READ @ Addr: 80000124
+[VICUNA MEMORY] Time: 109000 ns |  READ @ Addr: 80000128
+=======================================================
+[VICUNA VAULT]  Time: 109000 ns | Port 0 Wrote to v8
+                Payload: 00000044000000430000004200000041
+=======================================================
+[VICUNA MEMORY] Time: 109200 ns |  READ @ Addr: 8000012c
+[VICUNA MEMORY] Time: 109400 ns |  READ @ Addr: 80000130
+[VICUNA MEMORY] Time: 109600 ns |  READ @ Addr: 80000134
+[VICUNA MEMORY] Time: 109800 ns |  READ @ Addr: 80000138
+=======================================================
+[VICUNA VAULT]  Time: 109800 ns | Port 0 Wrote to v9
+                Payload: 00000048000000470000004600000045
+=======================================================
+[VICUNA MEMORY] Time: 110000 ns |  READ @ Addr: 8000013c
+[VICUNA MEMORY] Time: 110200 ns |  READ @ Addr: 80000140
+[VICUNA MEMORY] Time: 110400 ns |  READ @ Addr: 80000144
+[VICUNA MEMORY] Time: 110600 ns |  READ @ Addr: 80000148
+=======================================================
+[VICUNA VAULT]  Time: 110600 ns | Port 0 Wrote to v10
+                Payload: 0000004c0000004b0000004a00000049
+=======================================================
+[VICUNA MEMORY] Time: 110800 ns |  READ @ Addr: 8000014c
+[VICUNA RETIRE] Time: 111200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 111400 ns | Port 0 Wrote to v11
+                Payload: 000000500000004f0000004e0000004d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 111600 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 113400 ns |  READ @ Addr: 80000510
+[VICUNA MEMORY] Time: 113600 ns |  READ @ Addr: 80000514
+[VICUNA MEMORY] Time: 113800 ns |  READ @ Addr: 80000518
+[VICUNA MEMORY] Time: 114000 ns |  READ @ Addr: 8000051c
+[VICUNA MEMORY] Time: 114200 ns |  READ @ Addr: 80000520
+[VICUNA MEMORY] Time: 114400 ns |  READ @ Addr: 80000524
+[VICUNA MEMORY] Time: 114600 ns |  READ @ Addr: 80000528
+=======================================================
+[VICUNA VAULT]  Time: 114600 ns | Port 0 Wrote to v12
+                Payload: 00000044000000430000004200000041
+=======================================================
+[VICUNA MEMORY] Time: 114800 ns |  READ @ Addr: 8000052c
+[VICUNA MEMORY] Time: 115000 ns |  READ @ Addr: 80000530
+[VICUNA MEMORY] Time: 115200 ns |  READ @ Addr: 80000534
+[VICUNA MEMORY] Time: 115400 ns |  READ @ Addr: 80000538
+=======================================================
+[VICUNA VAULT]  Time: 115400 ns | Port 0 Wrote to v13
+                Payload: 00000048000000470000004600000045
+=======================================================
+[VICUNA MEMORY] Time: 115600 ns |  READ @ Addr: 8000053c
+[VICUNA MEMORY] Time: 115800 ns |  READ @ Addr: 80000540
+[VICUNA MEMORY] Time: 116000 ns |  READ @ Addr: 80000544
+[VICUNA MEMORY] Time: 116200 ns |  READ @ Addr: 80000548
+=======================================================
+[VICUNA VAULT]  Time: 116200 ns | Port 0 Wrote to v14
+                Payload: 0000004c0000004b0000004a00000049
+=======================================================
+[VICUNA MEMORY] Time: 116400 ns |  READ @ Addr: 8000054c
+[VICUNA RETIRE] Time: 116800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 117000 ns | Port 0 Wrote to v15
+                Payload: 000000500000004f0000004e0000004d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 117200 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 117400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 120400 ns | Port 0 Wrote to v16
+                Payload: 00001210000011890000110400001081
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 121200 ns | Port 0 Wrote to v17
+                Payload: 00001440000013b10000132400001299
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 122000 ns | Port 0 Wrote to v18
+                Payload: 00001690000015f900001564000014d1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 122800 ns | Port 0 Wrote to v19
+                Payload: 0000190000001861000017c400001729
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 123000 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 123200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 126000 ns | Port 0 Wrote to v4
+                Payload: 00002350000021ed0000209400001f45
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 126800 ns | Port 0 Wrote to v5
+                Payload: 00002940000027b500002634000024bd
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 127600 ns | Port 0 Wrote to v6
+                Payload: 00002fd000002e1d00002c7400002ad5
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 128400 ns | Port 0 Wrote to v7
+                Payload: 0000370000003525000033540000318d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 128600 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 130400 ns |  READ @ Addr: 80000150
+[VICUNA MEMORY] Time: 130600 ns |  READ @ Addr: 80000154
+[VICUNA MEMORY] Time: 130800 ns |  READ @ Addr: 80000158
+[VICUNA MEMORY] Time: 131000 ns |  READ @ Addr: 8000015c
+[VICUNA MEMORY] Time: 131200 ns |  READ @ Addr: 80000160
+[VICUNA MEMORY] Time: 131400 ns |  READ @ Addr: 80000164
+[VICUNA MEMORY] Time: 131600 ns |  READ @ Addr: 80000168
+=======================================================
+[VICUNA VAULT]  Time: 131600 ns | Port 0 Wrote to v8
+                Payload: 00000054000000530000005200000051
+=======================================================
+[VICUNA MEMORY] Time: 131800 ns |  READ @ Addr: 8000016c
+[VICUNA MEMORY] Time: 132000 ns |  READ @ Addr: 80000170
+[VICUNA MEMORY] Time: 132200 ns |  READ @ Addr: 80000174
+[VICUNA MEMORY] Time: 132400 ns |  READ @ Addr: 80000178
+=======================================================
+[VICUNA VAULT]  Time: 132400 ns | Port 0 Wrote to v9
+                Payload: 00000058000000570000005600000055
+=======================================================
+[VICUNA MEMORY] Time: 132600 ns |  READ @ Addr: 8000017c
+[VICUNA MEMORY] Time: 132800 ns |  READ @ Addr: 80000180
+[VICUNA MEMORY] Time: 133000 ns |  READ @ Addr: 80000184
+[VICUNA MEMORY] Time: 133200 ns |  READ @ Addr: 80000188
+=======================================================
+[VICUNA VAULT]  Time: 133200 ns | Port 0 Wrote to v10
+                Payload: 0000005c0000005b0000005a00000059
+=======================================================
+[VICUNA MEMORY] Time: 133400 ns |  READ @ Addr: 8000018c
+[VICUNA RETIRE] Time: 133800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 134000 ns | Port 0 Wrote to v11
+                Payload: 000000600000005f0000005e0000005d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 134200 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 136000 ns |  READ @ Addr: 80000550
+[VICUNA MEMORY] Time: 136200 ns |  READ @ Addr: 80000554
+[VICUNA MEMORY] Time: 136400 ns |  READ @ Addr: 80000558
+[VICUNA MEMORY] Time: 136600 ns |  READ @ Addr: 8000055c
+[VICUNA MEMORY] Time: 136800 ns |  READ @ Addr: 80000560
+[VICUNA MEMORY] Time: 137000 ns |  READ @ Addr: 80000564
+[VICUNA MEMORY] Time: 137200 ns |  READ @ Addr: 80000568
+=======================================================
+[VICUNA VAULT]  Time: 137200 ns | Port 0 Wrote to v12
+                Payload: 00000054000000530000005200000051
+=======================================================
+[VICUNA MEMORY] Time: 137400 ns |  READ @ Addr: 8000056c
+[VICUNA MEMORY] Time: 137600 ns |  READ @ Addr: 80000570
+[VICUNA MEMORY] Time: 137800 ns |  READ @ Addr: 80000574
+[VICUNA MEMORY] Time: 138000 ns |  READ @ Addr: 80000578
+=======================================================
+[VICUNA VAULT]  Time: 138000 ns | Port 0 Wrote to v13
+                Payload: 00000058000000570000005600000055
+=======================================================
+[VICUNA MEMORY] Time: 138200 ns |  READ @ Addr: 8000057c
+[VICUNA MEMORY] Time: 138400 ns |  READ @ Addr: 80000580
+[VICUNA MEMORY] Time: 138600 ns |  READ @ Addr: 80000584
+[VICUNA MEMORY] Time: 138800 ns |  READ @ Addr: 80000588
+=======================================================
+[VICUNA VAULT]  Time: 138800 ns | Port 0 Wrote to v14
+                Payload: 0000005c0000005b0000005a00000059
+=======================================================
+[VICUNA MEMORY] Time: 139000 ns |  READ @ Addr: 8000058c
+[VICUNA RETIRE] Time: 139400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 139600 ns | Port 0 Wrote to v15
+                Payload: 000000600000005f0000005e0000005d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 139800 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 140000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 143000 ns | Port 0 Wrote to v16
+                Payload: 00001b9000001ae900001a44000019a1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 143800 ns | Port 0 Wrote to v17
+                Payload: 00001e4000001d9100001ce400001c39
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 144600 ns | Port 0 Wrote to v18
+                Payload: 000021100000205900001fa400001ef1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 145400 ns | Port 0 Wrote to v19
+                Payload: 000024000000234100002284000021c9
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 145600 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 145800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 148600 ns | Port 0 Wrote to v4
+                Payload: 00003ee000003cd600003ad8000038e6
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 149400 ns | Port 0 Wrote to v5
+                Payload: 000047800000454600004318000040f6
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 150200 ns | Port 0 Wrote to v6
+                Payload: 000050e000004e7600004c18000049c6
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 151000 ns | Port 0 Wrote to v7
+                Payload: 00005b0000005866000055d800005356
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 151200 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 153000 ns |  READ @ Addr: 80000190
+[VICUNA MEMORY] Time: 153200 ns |  READ @ Addr: 80000194
+[VICUNA MEMORY] Time: 153400 ns |  READ @ Addr: 80000198
+[VICUNA MEMORY] Time: 153600 ns |  READ @ Addr: 8000019c
+[VICUNA MEMORY] Time: 153800 ns |  READ @ Addr: 800001a0
+[VICUNA MEMORY] Time: 154000 ns |  READ @ Addr: 800001a4
+[VICUNA MEMORY] Time: 154200 ns |  READ @ Addr: 800001a8
+=======================================================
+[VICUNA VAULT]  Time: 154200 ns | Port 0 Wrote to v8
+                Payload: 00000064000000630000006200000061
+=======================================================
+[VICUNA MEMORY] Time: 154400 ns |  READ @ Addr: 800001ac
+[VICUNA MEMORY] Time: 154600 ns |  READ @ Addr: 800001b0
+[VICUNA MEMORY] Time: 154800 ns |  READ @ Addr: 800001b4
+[VICUNA MEMORY] Time: 155000 ns |  READ @ Addr: 800001b8
+=======================================================
+[VICUNA VAULT]  Time: 155000 ns | Port 0 Wrote to v9
+                Payload: 00000068000000670000006600000065
+=======================================================
+[VICUNA MEMORY] Time: 155200 ns |  READ @ Addr: 800001bc
+[VICUNA MEMORY] Time: 155400 ns |  READ @ Addr: 800001c0
+[VICUNA MEMORY] Time: 155600 ns |  READ @ Addr: 800001c4
+[VICUNA MEMORY] Time: 155800 ns |  READ @ Addr: 800001c8
+=======================================================
+[VICUNA VAULT]  Time: 155800 ns | Port 0 Wrote to v10
+                Payload: 0000006c0000006b0000006a00000069
+=======================================================
+[VICUNA MEMORY] Time: 156000 ns |  READ @ Addr: 800001cc
+[VICUNA RETIRE] Time: 156400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 156600 ns | Port 0 Wrote to v11
+                Payload: 000000700000006f0000006e0000006d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 156800 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 158600 ns |  READ @ Addr: 80000590
+[VICUNA MEMORY] Time: 158800 ns |  READ @ Addr: 80000594
+[VICUNA MEMORY] Time: 159000 ns |  READ @ Addr: 80000598
+[VICUNA MEMORY] Time: 159200 ns |  READ @ Addr: 8000059c
+[VICUNA MEMORY] Time: 159400 ns |  READ @ Addr: 800005a0
+[VICUNA MEMORY] Time: 159600 ns |  READ @ Addr: 800005a4
+[VICUNA MEMORY] Time: 159800 ns |  READ @ Addr: 800005a8
+=======================================================
+[VICUNA VAULT]  Time: 159800 ns | Port 0 Wrote to v12
+                Payload: 00000064000000630000006200000061
+=======================================================
+[VICUNA MEMORY] Time: 160000 ns |  READ @ Addr: 800005ac
+[VICUNA MEMORY] Time: 160200 ns |  READ @ Addr: 800005b0
+[VICUNA MEMORY] Time: 160400 ns |  READ @ Addr: 800005b4
+[VICUNA MEMORY] Time: 160600 ns |  READ @ Addr: 800005b8
+=======================================================
+[VICUNA VAULT]  Time: 160600 ns | Port 0 Wrote to v13
+                Payload: 00000068000000670000006600000065
+=======================================================
+[VICUNA MEMORY] Time: 160800 ns |  READ @ Addr: 800005bc
+[VICUNA MEMORY] Time: 161000 ns |  READ @ Addr: 800005c0
+[VICUNA MEMORY] Time: 161200 ns |  READ @ Addr: 800005c4
+[VICUNA MEMORY] Time: 161400 ns |  READ @ Addr: 800005c8
+=======================================================
+[VICUNA VAULT]  Time: 161400 ns | Port 0 Wrote to v14
+                Payload: 0000006c0000006b0000006a00000069
+=======================================================
+[VICUNA MEMORY] Time: 161600 ns |  READ @ Addr: 800005cc
+[VICUNA RETIRE] Time: 162000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 162200 ns | Port 0 Wrote to v15
+                Payload: 000000700000006f0000006e0000006d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 162400 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 162600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 165600 ns | Port 0 Wrote to v16
+                Payload: 000027100000264900002584000024c1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 166400 ns | Port 0 Wrote to v17
+                Payload: 00002a4000002971000028a4000027d9
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 167200 ns | Port 0 Wrote to v18
+                Payload: 00002d9000002cb900002be400002b11
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 168000 ns | Port 0 Wrote to v19
+                Payload: 000031000000302100002f4400002e69
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 168200 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 168400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 171200 ns | Port 0 Wrote to v4
+                Payload: 000065f00000631f0000605c00005da7
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 172000 ns | Port 0 Wrote to v5
+                Payload: 000071c000006eb700006bbc000068cf
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 172800 ns | Port 0 Wrote to v6
+                Payload: 00007e7000007b2f000077fc000074d7
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 173600 ns | Port 0 Wrote to v7
+                Payload: 00008c00000088870000851c000081bf
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 173800 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 175600 ns |  READ @ Addr: 800001d0
+[VICUNA MEMORY] Time: 175800 ns |  READ @ Addr: 800001d4
+[VICUNA MEMORY] Time: 176000 ns |  READ @ Addr: 800001d8
+[VICUNA MEMORY] Time: 176200 ns |  READ @ Addr: 800001dc
+[VICUNA MEMORY] Time: 176400 ns |  READ @ Addr: 800001e0
+[VICUNA MEMORY] Time: 176600 ns |  READ @ Addr: 800001e4
+[VICUNA MEMORY] Time: 176800 ns |  READ @ Addr: 800001e8
+=======================================================
+[VICUNA VAULT]  Time: 176800 ns | Port 0 Wrote to v8
+                Payload: 00000074000000730000007200000071
+=======================================================
+[VICUNA MEMORY] Time: 177000 ns |  READ @ Addr: 800001ec
+[VICUNA MEMORY] Time: 177200 ns |  READ @ Addr: 800001f0
+[VICUNA MEMORY] Time: 177400 ns |  READ @ Addr: 800001f4
+[VICUNA MEMORY] Time: 177600 ns |  READ @ Addr: 800001f8
+=======================================================
+[VICUNA VAULT]  Time: 177600 ns | Port 0 Wrote to v9
+                Payload: 00000078000000770000007600000075
+=======================================================
+[VICUNA MEMORY] Time: 177800 ns |  READ @ Addr: 800001fc
+[VICUNA MEMORY] Time: 178000 ns |  READ @ Addr: 80000200
+[VICUNA MEMORY] Time: 178200 ns |  READ @ Addr: 80000204
+[VICUNA MEMORY] Time: 178400 ns |  READ @ Addr: 80000208
+=======================================================
+[VICUNA VAULT]  Time: 178400 ns | Port 0 Wrote to v10
+                Payload: 0000007c0000007b0000007a00000079
+=======================================================
+[VICUNA MEMORY] Time: 178600 ns |  READ @ Addr: 8000020c
+[VICUNA RETIRE] Time: 179000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 179200 ns | Port 0 Wrote to v11
+                Payload: 000000800000007f0000007e0000007d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 179400 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 181200 ns |  READ @ Addr: 800005d0
+[VICUNA MEMORY] Time: 181400 ns |  READ @ Addr: 800005d4
+[VICUNA MEMORY] Time: 181600 ns |  READ @ Addr: 800005d8
+[VICUNA MEMORY] Time: 181800 ns |  READ @ Addr: 800005dc
+[VICUNA MEMORY] Time: 182000 ns |  READ @ Addr: 800005e0
+[VICUNA MEMORY] Time: 182200 ns |  READ @ Addr: 800005e4
+[VICUNA MEMORY] Time: 182400 ns |  READ @ Addr: 800005e8
+=======================================================
+[VICUNA VAULT]  Time: 182400 ns | Port 0 Wrote to v12
+                Payload: 00000074000000730000007200000071
+=======================================================
+[VICUNA MEMORY] Time: 182600 ns |  READ @ Addr: 800005ec
+[VICUNA MEMORY] Time: 182800 ns |  READ @ Addr: 800005f0
+[VICUNA MEMORY] Time: 183000 ns |  READ @ Addr: 800005f4
+[VICUNA MEMORY] Time: 183200 ns |  READ @ Addr: 800005f8
+=======================================================
+[VICUNA VAULT]  Time: 183200 ns | Port 0 Wrote to v13
+                Payload: 00000078000000770000007600000075
+=======================================================
+[VICUNA MEMORY] Time: 183400 ns |  READ @ Addr: 800005fc
+[VICUNA MEMORY] Time: 183600 ns |  READ @ Addr: 80000600
+[VICUNA MEMORY] Time: 183800 ns |  READ @ Addr: 80000604
+[VICUNA MEMORY] Time: 184000 ns |  READ @ Addr: 80000608
+=======================================================
+[VICUNA VAULT]  Time: 184000 ns | Port 0 Wrote to v14
+                Payload: 0000007c0000007b0000007a00000079
+=======================================================
+[VICUNA MEMORY] Time: 184200 ns |  READ @ Addr: 8000060c
+[VICUNA RETIRE] Time: 184600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 184800 ns | Port 0 Wrote to v15
+                Payload: 000000800000007f0000007e0000007d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 185000 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 185200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 188200 ns | Port 0 Wrote to v16
+                Payload: 00003490000033a9000032c4000031e1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 189000 ns | Port 0 Wrote to v17
+                Payload: 00003840000037510000366400003579
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 189800 ns | Port 0 Wrote to v18
+                Payload: 00003c1000003b1900003a2400003931
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 190600 ns | Port 0 Wrote to v19
+                Payload: 0000400000003f0100003e0400003d09
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 190800 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 191000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 193800 ns | Port 0 Wrote to v4
+                Payload: 00009a80000096c80000932000008f88
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 194600 ns | Port 0 Wrote to v5
+                Payload: 0000aa000000a6080000a22000009e48
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 195400 ns | Port 0 Wrote to v6
+                Payload: 0000ba800000b6480000b2200000ae08
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 196200 ns | Port 0 Wrote to v7
+                Payload: 0000cc000000c7880000c3200000bec8
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 196400 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 198200 ns |  READ @ Addr: 80000210
+[VICUNA MEMORY] Time: 198400 ns |  READ @ Addr: 80000214
+[VICUNA MEMORY] Time: 198600 ns |  READ @ Addr: 80000218
+[VICUNA MEMORY] Time: 198800 ns |  READ @ Addr: 8000021c
+[VICUNA MEMORY] Time: 199000 ns |  READ @ Addr: 80000220
+[VICUNA MEMORY] Time: 199200 ns |  READ @ Addr: 80000224
+[VICUNA MEMORY] Time: 199400 ns |  READ @ Addr: 80000228
+=======================================================
+[VICUNA VAULT]  Time: 199400 ns | Port 0 Wrote to v8
+                Payload: 00000084000000830000008200000081
+=======================================================
+[VICUNA MEMORY] Time: 199600 ns |  READ @ Addr: 8000022c
+[VICUNA MEMORY] Time: 199800 ns |  READ @ Addr: 80000230
+[VICUNA MEMORY] Time: 200000 ns |  READ @ Addr: 80000234
+[VICUNA MEMORY] Time: 200200 ns |  READ @ Addr: 80000238
+=======================================================
+[VICUNA VAULT]  Time: 200200 ns | Port 0 Wrote to v9
+                Payload: 00000088000000870000008600000085
+=======================================================
+[VICUNA MEMORY] Time: 200400 ns |  READ @ Addr: 8000023c
+[VICUNA MEMORY] Time: 200600 ns |  READ @ Addr: 80000240
+[VICUNA MEMORY] Time: 200800 ns |  READ @ Addr: 80000244
+[VICUNA MEMORY] Time: 201000 ns |  READ @ Addr: 80000248
+=======================================================
+[VICUNA VAULT]  Time: 201000 ns | Port 0 Wrote to v10
+                Payload: 0000008c0000008b0000008a00000089
+=======================================================
+[VICUNA MEMORY] Time: 201200 ns |  READ @ Addr: 8000024c
+[VICUNA RETIRE] Time: 201600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 201800 ns | Port 0 Wrote to v11
+                Payload: 000000900000008f0000008e0000008d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 202000 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 203800 ns |  READ @ Addr: 80000610
+[VICUNA MEMORY] Time: 204000 ns |  READ @ Addr: 80000614
+[VICUNA MEMORY] Time: 204200 ns |  READ @ Addr: 80000618
+[VICUNA MEMORY] Time: 204400 ns |  READ @ Addr: 8000061c
+[VICUNA MEMORY] Time: 204600 ns |  READ @ Addr: 80000620
+[VICUNA MEMORY] Time: 204800 ns |  READ @ Addr: 80000624
+[VICUNA MEMORY] Time: 205000 ns |  READ @ Addr: 80000628
+=======================================================
+[VICUNA VAULT]  Time: 205000 ns | Port 0 Wrote to v12
+                Payload: 00000084000000830000008200000081
+=======================================================
+[VICUNA MEMORY] Time: 205200 ns |  READ @ Addr: 8000062c
+[VICUNA MEMORY] Time: 205400 ns |  READ @ Addr: 80000630
+[VICUNA MEMORY] Time: 205600 ns |  READ @ Addr: 80000634
+[VICUNA MEMORY] Time: 205800 ns |  READ @ Addr: 80000638
+=======================================================
+[VICUNA VAULT]  Time: 205800 ns | Port 0 Wrote to v13
+                Payload: 00000088000000870000008600000085
+=======================================================
+[VICUNA MEMORY] Time: 206000 ns |  READ @ Addr: 8000063c
+[VICUNA MEMORY] Time: 206200 ns |  READ @ Addr: 80000640
+[VICUNA MEMORY] Time: 206400 ns |  READ @ Addr: 80000644
+[VICUNA MEMORY] Time: 206600 ns |  READ @ Addr: 80000648
+=======================================================
+[VICUNA VAULT]  Time: 206600 ns | Port 0 Wrote to v14
+                Payload: 0000008c0000008b0000008a00000089
+=======================================================
+[VICUNA MEMORY] Time: 206800 ns |  READ @ Addr: 8000064c
+[VICUNA RETIRE] Time: 207200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 207400 ns | Port 0 Wrote to v15
+                Payload: 000000900000008f0000008e0000008d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 207600 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 207800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 210800 ns | Port 0 Wrote to v16
+                Payload: 00004410000043090000420400004101
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 211600 ns | Port 0 Wrote to v17
+                Payload: 00004840000047310000462400004519
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 212400 ns | Port 0 Wrote to v18
+                Payload: 00004c9000004b7900004a6400004951
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 213200 ns | Port 0 Wrote to v19
+                Payload: 0000510000004fe100004ec400004da9
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 213400 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 213600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 216400 ns | Port 0 Wrote to v4
+                Payload: 0000de900000d9d10000d5240000d089
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 217200 ns | Port 0 Wrote to v5
+                Payload: 0000f2400000ed390000e8440000e361
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 218000 ns | Port 0 Wrote to v6
+                Payload: 00010710000101c10000fc840000f759
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 218800 ns | Port 0 Wrote to v7
+                Payload: 00011d0000011769000111e400010c71
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 219000 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 220800 ns |  READ @ Addr: 80000250
+[VICUNA MEMORY] Time: 221000 ns |  READ @ Addr: 80000254
+[VICUNA MEMORY] Time: 221200 ns |  READ @ Addr: 80000258
+[VICUNA MEMORY] Time: 221400 ns |  READ @ Addr: 8000025c
+[VICUNA MEMORY] Time: 221600 ns |  READ @ Addr: 80000260
+[VICUNA MEMORY] Time: 221800 ns |  READ @ Addr: 80000264
+[VICUNA MEMORY] Time: 222000 ns |  READ @ Addr: 80000268
+=======================================================
+[VICUNA VAULT]  Time: 222000 ns | Port 0 Wrote to v8
+                Payload: 00000094000000930000009200000091
+=======================================================
+[VICUNA MEMORY] Time: 222200 ns |  READ @ Addr: 8000026c
+[VICUNA MEMORY] Time: 222400 ns |  READ @ Addr: 80000270
+[VICUNA MEMORY] Time: 222600 ns |  READ @ Addr: 80000274
+[VICUNA MEMORY] Time: 222800 ns |  READ @ Addr: 80000278
+=======================================================
+[VICUNA VAULT]  Time: 222800 ns | Port 0 Wrote to v9
+                Payload: 00000098000000970000009600000095
+=======================================================
+[VICUNA MEMORY] Time: 223000 ns |  READ @ Addr: 8000027c
+[VICUNA MEMORY] Time: 223200 ns |  READ @ Addr: 80000280
+[VICUNA MEMORY] Time: 223400 ns |  READ @ Addr: 80000284
+[VICUNA MEMORY] Time: 223600 ns |  READ @ Addr: 80000288
+=======================================================
+[VICUNA VAULT]  Time: 223600 ns | Port 0 Wrote to v10
+                Payload: 0000009c0000009b0000009a00000099
+=======================================================
+[VICUNA MEMORY] Time: 223800 ns |  READ @ Addr: 8000028c
+[VICUNA RETIRE] Time: 224200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 224400 ns | Port 0 Wrote to v11
+                Payload: 000000a00000009f0000009e0000009d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 224600 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 226400 ns |  READ @ Addr: 80000650
+[VICUNA MEMORY] Time: 226600 ns |  READ @ Addr: 80000654
+[VICUNA MEMORY] Time: 226800 ns |  READ @ Addr: 80000658
+[VICUNA MEMORY] Time: 227000 ns |  READ @ Addr: 8000065c
+[VICUNA MEMORY] Time: 227200 ns |  READ @ Addr: 80000660
+[VICUNA MEMORY] Time: 227400 ns |  READ @ Addr: 80000664
+[VICUNA MEMORY] Time: 227600 ns |  READ @ Addr: 80000668
+=======================================================
+[VICUNA VAULT]  Time: 227600 ns | Port 0 Wrote to v12
+                Payload: 00000094000000930000009200000091
+=======================================================
+[VICUNA MEMORY] Time: 227800 ns |  READ @ Addr: 8000066c
+[VICUNA MEMORY] Time: 228000 ns |  READ @ Addr: 80000670
+[VICUNA MEMORY] Time: 228200 ns |  READ @ Addr: 80000674
+[VICUNA MEMORY] Time: 228400 ns |  READ @ Addr: 80000678
+=======================================================
+[VICUNA VAULT]  Time: 228400 ns | Port 0 Wrote to v13
+                Payload: 00000098000000970000009600000095
+=======================================================
+[VICUNA MEMORY] Time: 228600 ns |  READ @ Addr: 8000067c
+[VICUNA MEMORY] Time: 228800 ns |  READ @ Addr: 80000680
+[VICUNA MEMORY] Time: 229000 ns |  READ @ Addr: 80000684
+[VICUNA MEMORY] Time: 229200 ns |  READ @ Addr: 80000688
+=======================================================
+[VICUNA VAULT]  Time: 229200 ns | Port 0 Wrote to v14
+                Payload: 0000009c0000009b0000009a00000099
+=======================================================
+[VICUNA MEMORY] Time: 229400 ns |  READ @ Addr: 8000068c
+[VICUNA RETIRE] Time: 229800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 230000 ns | Port 0 Wrote to v15
+                Payload: 000000a00000009f0000009e0000009d
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 230200 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 230400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 233400 ns | Port 0 Wrote to v16
+                Payload: 00005590000054690000534400005221
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 234200 ns | Port 0 Wrote to v17
+                Payload: 00005a4000005911000057e4000056b9
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 235000 ns | Port 0 Wrote to v18
+                Payload: 00005f1000005dd900005ca400005b71
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 235800 ns | Port 0 Wrote to v19
+                Payload: 00006400000062c10000618400006049
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 236000 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 236200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 239000 ns | Port 0 Wrote to v4
+                Payload: 0001342000012e3a00012868000122aa
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 239800 ns | Port 0 Wrote to v5
+                Payload: 00014c800001464a0001402800013a1a
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 240600 ns | Port 0 Wrote to v6
+                Payload: 0001662000015f9a00015928000152ca
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 241400 ns | Port 0 Wrote to v7
+                Payload: 0001810000017a2a0001736800016cba
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 241600 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 243400 ns |  READ @ Addr: 80000290
+[VICUNA MEMORY] Time: 243600 ns |  READ @ Addr: 80000294
+[VICUNA MEMORY] Time: 243800 ns |  READ @ Addr: 80000298
+[VICUNA MEMORY] Time: 244000 ns |  READ @ Addr: 8000029c
+[VICUNA MEMORY] Time: 244200 ns |  READ @ Addr: 800002a0
+[VICUNA MEMORY] Time: 244400 ns |  READ @ Addr: 800002a4
+[VICUNA MEMORY] Time: 244600 ns |  READ @ Addr: 800002a8
+=======================================================
+[VICUNA VAULT]  Time: 244600 ns | Port 0 Wrote to v8
+                Payload: 000000a4000000a3000000a2000000a1
+=======================================================
+[VICUNA MEMORY] Time: 244800 ns |  READ @ Addr: 800002ac
+[VICUNA MEMORY] Time: 245000 ns |  READ @ Addr: 800002b0
+[VICUNA MEMORY] Time: 245200 ns |  READ @ Addr: 800002b4
+[VICUNA MEMORY] Time: 245400 ns |  READ @ Addr: 800002b8
+=======================================================
+[VICUNA VAULT]  Time: 245400 ns | Port 0 Wrote to v9
+                Payload: 000000a8000000a7000000a6000000a5
+=======================================================
+[VICUNA MEMORY] Time: 245600 ns |  READ @ Addr: 800002bc
+[VICUNA MEMORY] Time: 245800 ns |  READ @ Addr: 800002c0
+[VICUNA MEMORY] Time: 246000 ns |  READ @ Addr: 800002c4
+[VICUNA MEMORY] Time: 246200 ns |  READ @ Addr: 800002c8
+=======================================================
+[VICUNA VAULT]  Time: 246200 ns | Port 0 Wrote to v10
+                Payload: 000000ac000000ab000000aa000000a9
+=======================================================
+[VICUNA MEMORY] Time: 246400 ns |  READ @ Addr: 800002cc
+[VICUNA RETIRE] Time: 246800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 247000 ns | Port 0 Wrote to v11
+                Payload: 000000b0000000af000000ae000000ad
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 247200 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 249000 ns |  READ @ Addr: 80000690
+[VICUNA MEMORY] Time: 249200 ns |  READ @ Addr: 80000694
+[VICUNA MEMORY] Time: 249400 ns |  READ @ Addr: 80000698
+[VICUNA MEMORY] Time: 249600 ns |  READ @ Addr: 8000069c
+[VICUNA MEMORY] Time: 249800 ns |  READ @ Addr: 800006a0
+[VICUNA MEMORY] Time: 250000 ns |  READ @ Addr: 800006a4
+[VICUNA MEMORY] Time: 250200 ns |  READ @ Addr: 800006a8
+=======================================================
+[VICUNA VAULT]  Time: 250200 ns | Port 0 Wrote to v12
+                Payload: 000000a4000000a3000000a2000000a1
+=======================================================
+[VICUNA MEMORY] Time: 250400 ns |  READ @ Addr: 800006ac
+[VICUNA MEMORY] Time: 250600 ns |  READ @ Addr: 800006b0
+[VICUNA MEMORY] Time: 250800 ns |  READ @ Addr: 800006b4
+[VICUNA MEMORY] Time: 251000 ns |  READ @ Addr: 800006b8
+=======================================================
+[VICUNA VAULT]  Time: 251000 ns | Port 0 Wrote to v13
+                Payload: 000000a8000000a7000000a6000000a5
+=======================================================
+[VICUNA MEMORY] Time: 251200 ns |  READ @ Addr: 800006bc
+[VICUNA MEMORY] Time: 251400 ns |  READ @ Addr: 800006c0
+[VICUNA MEMORY] Time: 251600 ns |  READ @ Addr: 800006c4
+[VICUNA MEMORY] Time: 251800 ns |  READ @ Addr: 800006c8
+=======================================================
+[VICUNA VAULT]  Time: 251800 ns | Port 0 Wrote to v14
+                Payload: 000000ac000000ab000000aa000000a9
+=======================================================
+[VICUNA MEMORY] Time: 252000 ns |  READ @ Addr: 800006cc
+[VICUNA RETIRE] Time: 252400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 252600 ns | Port 0 Wrote to v15
+                Payload: 000000b0000000af000000ae000000ad
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 252800 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 253000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 256000 ns | Port 0 Wrote to v16
+                Payload: 00006910000067c90000668400006541
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 256800 ns | Port 0 Wrote to v17
+                Payload: 00006e4000006cf100006ba400006a59
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 257600 ns | Port 0 Wrote to v18
+                Payload: 0000739000007239000070e400006f91
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 258400 ns | Port 0 Wrote to v19
+                Payload: 00007900000077a100007644000074e9
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 258600 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 258800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 261600 ns | Port 0 Wrote to v4
+                Payload: 00019d300001960300018eec000187eb
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 262400 ns | Port 0 Wrote to v5
+                Payload: 0001bac00001b33b0001abcc0001a473
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 263200 ns | Port 0 Wrote to v6
+                Payload: 0001d9b00001d1d30001ca0c0001c25b
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 264000 ns | Port 0 Wrote to v7
+                Payload: 0001fa000001f1cb0001e9ac0001e1a3
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 264200 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 266000 ns |  READ @ Addr: 800002d0
+[VICUNA MEMORY] Time: 266200 ns |  READ @ Addr: 800002d4
+[VICUNA MEMORY] Time: 266400 ns |  READ @ Addr: 800002d8
+[VICUNA MEMORY] Time: 266600 ns |  READ @ Addr: 800002dc
+[VICUNA MEMORY] Time: 266800 ns |  READ @ Addr: 800002e0
+[VICUNA MEMORY] Time: 267000 ns |  READ @ Addr: 800002e4
+[VICUNA MEMORY] Time: 267200 ns |  READ @ Addr: 800002e8
+=======================================================
+[VICUNA VAULT]  Time: 267200 ns | Port 0 Wrote to v8
+                Payload: 000000b4000000b3000000b2000000b1
+=======================================================
+[VICUNA MEMORY] Time: 267400 ns |  READ @ Addr: 800002ec
+[VICUNA MEMORY] Time: 267600 ns |  READ @ Addr: 800002f0
+[VICUNA MEMORY] Time: 267800 ns |  READ @ Addr: 800002f4
+[VICUNA MEMORY] Time: 268000 ns |  READ @ Addr: 800002f8
+=======================================================
+[VICUNA VAULT]  Time: 268000 ns | Port 0 Wrote to v9
+                Payload: 000000b8000000b7000000b6000000b5
+=======================================================
+[VICUNA MEMORY] Time: 268200 ns |  READ @ Addr: 800002fc
+[VICUNA MEMORY] Time: 268400 ns |  READ @ Addr: 80000300
+[VICUNA MEMORY] Time: 268600 ns |  READ @ Addr: 80000304
+[VICUNA MEMORY] Time: 268800 ns |  READ @ Addr: 80000308
+=======================================================
+[VICUNA VAULT]  Time: 268800 ns | Port 0 Wrote to v10
+                Payload: 000000bc000000bb000000ba000000b9
+=======================================================
+[VICUNA MEMORY] Time: 269000 ns |  READ @ Addr: 8000030c
+[VICUNA RETIRE] Time: 269400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 269600 ns | Port 0 Wrote to v11
+                Payload: 000000c0000000bf000000be000000bd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 269800 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 271600 ns |  READ @ Addr: 800006d0
+[VICUNA MEMORY] Time: 271800 ns |  READ @ Addr: 800006d4
+[VICUNA MEMORY] Time: 272000 ns |  READ @ Addr: 800006d8
+[VICUNA MEMORY] Time: 272200 ns |  READ @ Addr: 800006dc
+[VICUNA MEMORY] Time: 272400 ns |  READ @ Addr: 800006e0
+[VICUNA MEMORY] Time: 272600 ns |  READ @ Addr: 800006e4
+[VICUNA MEMORY] Time: 272800 ns |  READ @ Addr: 800006e8
+=======================================================
+[VICUNA VAULT]  Time: 272800 ns | Port 0 Wrote to v12
+                Payload: 000000b4000000b3000000b2000000b1
+=======================================================
+[VICUNA MEMORY] Time: 273000 ns |  READ @ Addr: 800006ec
+[VICUNA MEMORY] Time: 273200 ns |  READ @ Addr: 800006f0
+[VICUNA MEMORY] Time: 273400 ns |  READ @ Addr: 800006f4
+[VICUNA MEMORY] Time: 273600 ns |  READ @ Addr: 800006f8
+=======================================================
+[VICUNA VAULT]  Time: 273600 ns | Port 0 Wrote to v13
+                Payload: 000000b8000000b7000000b6000000b5
+=======================================================
+[VICUNA MEMORY] Time: 273800 ns |  READ @ Addr: 800006fc
+[VICUNA MEMORY] Time: 274000 ns |  READ @ Addr: 80000700
+[VICUNA MEMORY] Time: 274200 ns |  READ @ Addr: 80000704
+[VICUNA MEMORY] Time: 274400 ns |  READ @ Addr: 80000708
+=======================================================
+[VICUNA VAULT]  Time: 274400 ns | Port 0 Wrote to v14
+                Payload: 000000bc000000bb000000ba000000b9
+=======================================================
+[VICUNA MEMORY] Time: 274600 ns |  READ @ Addr: 8000070c
+[VICUNA RETIRE] Time: 275000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 275200 ns | Port 0 Wrote to v15
+                Payload: 000000c0000000bf000000be000000bd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 275400 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 275600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 278600 ns | Port 0 Wrote to v16
+                Payload: 00007e9000007d2900007bc400007a61
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 279400 ns | Port 0 Wrote to v17
+                Payload: 00008440000082d10000816400007ff9
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 280200 ns | Port 0 Wrote to v18
+                Payload: 00008a100000889900008724000085b1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 281000 ns | Port 0 Wrote to v19
+                Payload: 0000900000008e8100008d0400008b89
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 281200 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 281400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 284200 ns | Port 0 Wrote to v4
+                Payload: 00021bc00002132c00020ab00002024c
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 285000 ns | Port 0 Wrote to v5
+                Payload: 00023f000002360c00022d300002246c
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 285800 ns | Port 0 Wrote to v6
+                Payload: 000263c000025a6c000251300002480c
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 286600 ns | Port 0 Wrote to v7
+                Payload: 00028a000002804c000276b000026d2c
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 286800 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 288600 ns |  READ @ Addr: 80000310
+[VICUNA MEMORY] Time: 288800 ns |  READ @ Addr: 80000314
+[VICUNA MEMORY] Time: 289000 ns |  READ @ Addr: 80000318
+[VICUNA MEMORY] Time: 289200 ns |  READ @ Addr: 8000031c
+[VICUNA MEMORY] Time: 289400 ns |  READ @ Addr: 80000320
+[VICUNA MEMORY] Time: 289600 ns |  READ @ Addr: 80000324
+[VICUNA MEMORY] Time: 289800 ns |  READ @ Addr: 80000328
+=======================================================
+[VICUNA VAULT]  Time: 289800 ns | Port 0 Wrote to v8
+                Payload: 000000c4000000c3000000c2000000c1
+=======================================================
+[VICUNA MEMORY] Time: 290000 ns |  READ @ Addr: 8000032c
+[VICUNA MEMORY] Time: 290200 ns |  READ @ Addr: 80000330
+[VICUNA MEMORY] Time: 290400 ns |  READ @ Addr: 80000334
+[VICUNA MEMORY] Time: 290600 ns |  READ @ Addr: 80000338
+=======================================================
+[VICUNA VAULT]  Time: 290600 ns | Port 0 Wrote to v9
+                Payload: 000000c8000000c7000000c6000000c5
+=======================================================
+[VICUNA MEMORY] Time: 290800 ns |  READ @ Addr: 8000033c
+[VICUNA MEMORY] Time: 291000 ns |  READ @ Addr: 80000340
+[VICUNA MEMORY] Time: 291200 ns |  READ @ Addr: 80000344
+[VICUNA MEMORY] Time: 291400 ns |  READ @ Addr: 80000348
+=======================================================
+[VICUNA VAULT]  Time: 291400 ns | Port 0 Wrote to v10
+                Payload: 000000cc000000cb000000ca000000c9
+=======================================================
+[VICUNA MEMORY] Time: 291600 ns |  READ @ Addr: 8000034c
+[VICUNA RETIRE] Time: 292000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 292200 ns | Port 0 Wrote to v11
+                Payload: 000000d0000000cf000000ce000000cd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 292400 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 294200 ns |  READ @ Addr: 80000710
+[VICUNA MEMORY] Time: 294400 ns |  READ @ Addr: 80000714
+[VICUNA MEMORY] Time: 294600 ns |  READ @ Addr: 80000718
+[VICUNA MEMORY] Time: 294800 ns |  READ @ Addr: 8000071c
+[VICUNA MEMORY] Time: 295000 ns |  READ @ Addr: 80000720
+[VICUNA MEMORY] Time: 295200 ns |  READ @ Addr: 80000724
+[VICUNA MEMORY] Time: 295400 ns |  READ @ Addr: 80000728
+=======================================================
+[VICUNA VAULT]  Time: 295400 ns | Port 0 Wrote to v12
+                Payload: 000000c4000000c3000000c2000000c1
+=======================================================
+[VICUNA MEMORY] Time: 295600 ns |  READ @ Addr: 8000072c
+[VICUNA MEMORY] Time: 295800 ns |  READ @ Addr: 80000730
+[VICUNA MEMORY] Time: 296000 ns |  READ @ Addr: 80000734
+[VICUNA MEMORY] Time: 296200 ns |  READ @ Addr: 80000738
+=======================================================
+[VICUNA VAULT]  Time: 296200 ns | Port 0 Wrote to v13
+                Payload: 000000c8000000c7000000c6000000c5
+=======================================================
+[VICUNA MEMORY] Time: 296400 ns |  READ @ Addr: 8000073c
+[VICUNA MEMORY] Time: 296600 ns |  READ @ Addr: 80000740
+[VICUNA MEMORY] Time: 296800 ns |  READ @ Addr: 80000744
+[VICUNA MEMORY] Time: 297000 ns |  READ @ Addr: 80000748
+=======================================================
+[VICUNA VAULT]  Time: 297000 ns | Port 0 Wrote to v14
+                Payload: 000000cc000000cb000000ca000000c9
+=======================================================
+[VICUNA MEMORY] Time: 297200 ns |  READ @ Addr: 8000074c
+[VICUNA RETIRE] Time: 297600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 297800 ns | Port 0 Wrote to v15
+                Payload: 000000d0000000cf000000ce000000cd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 298000 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 298200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 301200 ns | Port 0 Wrote to v16
+                Payload: 00009610000094890000930400009181
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 302000 ns | Port 0 Wrote to v17
+                Payload: 00009c4000009ab10000992400009799
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 302800 ns | Port 0 Wrote to v18
+                Payload: 0000a2900000a0f900009f6400009dd1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 303600 ns | Port 0 Wrote to v19
+                Payload: 0000a9000000a7610000a5c40000a429
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 303800 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 304000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 306800 ns | Port 0 Wrote to v4
+                Payload: 0002b1d00002a7b500029db4000293cd
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 307600 ns | Port 0 Wrote to v5
+                Payload: 0002db400002d0bd0002c6540002bc05
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 308400 ns | Port 0 Wrote to v6
+                Payload: 000306500002fb650002f0940002e5dd
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 309200 ns | Port 0 Wrote to v7
+                Payload: 00033300000327ad00031c7400031155
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 309400 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 311200 ns |  READ @ Addr: 80000350
+[VICUNA MEMORY] Time: 311400 ns |  READ @ Addr: 80000354
+[VICUNA MEMORY] Time: 311600 ns |  READ @ Addr: 80000358
+[VICUNA MEMORY] Time: 311800 ns |  READ @ Addr: 8000035c
+[VICUNA MEMORY] Time: 312000 ns |  READ @ Addr: 80000360
+[VICUNA MEMORY] Time: 312200 ns |  READ @ Addr: 80000364
+[VICUNA MEMORY] Time: 312400 ns |  READ @ Addr: 80000368
+=======================================================
+[VICUNA VAULT]  Time: 312400 ns | Port 0 Wrote to v8
+                Payload: 000000d4000000d3000000d2000000d1
+=======================================================
+[VICUNA MEMORY] Time: 312600 ns |  READ @ Addr: 8000036c
+[VICUNA MEMORY] Time: 312800 ns |  READ @ Addr: 80000370
+[VICUNA MEMORY] Time: 313000 ns |  READ @ Addr: 80000374
+[VICUNA MEMORY] Time: 313200 ns |  READ @ Addr: 80000378
+=======================================================
+[VICUNA VAULT]  Time: 313200 ns | Port 0 Wrote to v9
+                Payload: 000000d8000000d7000000d6000000d5
+=======================================================
+[VICUNA MEMORY] Time: 313400 ns |  READ @ Addr: 8000037c
+[VICUNA MEMORY] Time: 313600 ns |  READ @ Addr: 80000380
+[VICUNA MEMORY] Time: 313800 ns |  READ @ Addr: 80000384
+[VICUNA MEMORY] Time: 314000 ns |  READ @ Addr: 80000388
+=======================================================
+[VICUNA VAULT]  Time: 314000 ns | Port 0 Wrote to v10
+                Payload: 000000dc000000db000000da000000d9
+=======================================================
+[VICUNA MEMORY] Time: 314200 ns |  READ @ Addr: 8000038c
+[VICUNA RETIRE] Time: 314600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 314800 ns | Port 0 Wrote to v11
+                Payload: 000000e0000000df000000de000000dd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 315000 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 316800 ns |  READ @ Addr: 80000750
+[VICUNA MEMORY] Time: 317000 ns |  READ @ Addr: 80000754
+[VICUNA MEMORY] Time: 317200 ns |  READ @ Addr: 80000758
+[VICUNA MEMORY] Time: 317400 ns |  READ @ Addr: 8000075c
+[VICUNA MEMORY] Time: 317600 ns |  READ @ Addr: 80000760
+[VICUNA MEMORY] Time: 317800 ns |  READ @ Addr: 80000764
+[VICUNA MEMORY] Time: 318000 ns |  READ @ Addr: 80000768
+=======================================================
+[VICUNA VAULT]  Time: 318000 ns | Port 0 Wrote to v12
+                Payload: 000000d4000000d3000000d2000000d1
+=======================================================
+[VICUNA MEMORY] Time: 318200 ns |  READ @ Addr: 8000076c
+[VICUNA MEMORY] Time: 318400 ns |  READ @ Addr: 80000770
+[VICUNA MEMORY] Time: 318600 ns |  READ @ Addr: 80000774
+[VICUNA MEMORY] Time: 318800 ns |  READ @ Addr: 80000778
+=======================================================
+[VICUNA VAULT]  Time: 318800 ns | Port 0 Wrote to v13
+                Payload: 000000d8000000d7000000d6000000d5
+=======================================================
+[VICUNA MEMORY] Time: 319000 ns |  READ @ Addr: 8000077c
+[VICUNA MEMORY] Time: 319200 ns |  READ @ Addr: 80000780
+[VICUNA MEMORY] Time: 319400 ns |  READ @ Addr: 80000784
+[VICUNA MEMORY] Time: 319600 ns |  READ @ Addr: 80000788
+=======================================================
+[VICUNA VAULT]  Time: 319600 ns | Port 0 Wrote to v14
+                Payload: 000000dc000000db000000da000000d9
+=======================================================
+[VICUNA MEMORY] Time: 319800 ns |  READ @ Addr: 8000078c
+[VICUNA RETIRE] Time: 320200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 320400 ns | Port 0 Wrote to v15
+                Payload: 000000e0000000df000000de000000dd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 320600 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 320800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 323800 ns | Port 0 Wrote to v16
+                Payload: 0000af900000ade90000ac440000aaa1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 324600 ns | Port 0 Wrote to v17
+                Payload: 0000b6400000b4910000b2e40000b139
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 325400 ns | Port 0 Wrote to v18
+                Payload: 0000bd100000bb590000b9a40000b7f1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 326200 ns | Port 0 Wrote to v19
+                Payload: 0000c4000000c2410000c0840000bec9
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 326400 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 326600 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 329400 ns | Port 0 Wrote to v4
+                Payload: 000361600003559e000349f800033e6e
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 330200 ns | Port 0 Wrote to v5
+                Payload: 000391800003854e0003793800036d3e
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 331000 ns | Port 0 Wrote to v6
+                Payload: 0003c3600003b6be0003aa3800039dce
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 331800 ns | Port 0 Wrote to v7
+                Payload: 0003f7000003e9ee0003dcf80003d01e
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 332000 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 333800 ns |  READ @ Addr: 80000390
+[VICUNA MEMORY] Time: 334000 ns |  READ @ Addr: 80000394
+[VICUNA MEMORY] Time: 334200 ns |  READ @ Addr: 80000398
+[VICUNA MEMORY] Time: 334400 ns |  READ @ Addr: 8000039c
+[VICUNA MEMORY] Time: 334600 ns |  READ @ Addr: 800003a0
+[VICUNA MEMORY] Time: 334800 ns |  READ @ Addr: 800003a4
+[VICUNA MEMORY] Time: 335000 ns |  READ @ Addr: 800003a8
+=======================================================
+[VICUNA VAULT]  Time: 335000 ns | Port 0 Wrote to v8
+                Payload: 000000e4000000e3000000e2000000e1
+=======================================================
+[VICUNA MEMORY] Time: 335200 ns |  READ @ Addr: 800003ac
+[VICUNA MEMORY] Time: 335400 ns |  READ @ Addr: 800003b0
+[VICUNA MEMORY] Time: 335600 ns |  READ @ Addr: 800003b4
+[VICUNA MEMORY] Time: 335800 ns |  READ @ Addr: 800003b8
+=======================================================
+[VICUNA VAULT]  Time: 335800 ns | Port 0 Wrote to v9
+                Payload: 000000e8000000e7000000e6000000e5
+=======================================================
+[VICUNA MEMORY] Time: 336000 ns |  READ @ Addr: 800003bc
+[VICUNA MEMORY] Time: 336200 ns |  READ @ Addr: 800003c0
+[VICUNA MEMORY] Time: 336400 ns |  READ @ Addr: 800003c4
+[VICUNA MEMORY] Time: 336600 ns |  READ @ Addr: 800003c8
+=======================================================
+[VICUNA VAULT]  Time: 336600 ns | Port 0 Wrote to v10
+                Payload: 000000ec000000eb000000ea000000e9
+=======================================================
+[VICUNA MEMORY] Time: 336800 ns |  READ @ Addr: 800003cc
+[VICUNA RETIRE] Time: 337200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 337400 ns | Port 0 Wrote to v11
+                Payload: 000000f0000000ef000000ee000000ed
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 337600 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 339400 ns |  READ @ Addr: 80000790
+[VICUNA MEMORY] Time: 339600 ns |  READ @ Addr: 80000794
+[VICUNA MEMORY] Time: 339800 ns |  READ @ Addr: 80000798
+[VICUNA MEMORY] Time: 340000 ns |  READ @ Addr: 8000079c
+[VICUNA MEMORY] Time: 340200 ns |  READ @ Addr: 800007a0
+[VICUNA MEMORY] Time: 340400 ns |  READ @ Addr: 800007a4
+[VICUNA MEMORY] Time: 340600 ns |  READ @ Addr: 800007a8
+=======================================================
+[VICUNA VAULT]  Time: 340600 ns | Port 0 Wrote to v12
+                Payload: 000000e4000000e3000000e2000000e1
+=======================================================
+[VICUNA MEMORY] Time: 340800 ns |  READ @ Addr: 800007ac
+[VICUNA MEMORY] Time: 341000 ns |  READ @ Addr: 800007b0
+[VICUNA MEMORY] Time: 341200 ns |  READ @ Addr: 800007b4
+[VICUNA MEMORY] Time: 341400 ns |  READ @ Addr: 800007b8
+=======================================================
+[VICUNA VAULT]  Time: 341400 ns | Port 0 Wrote to v13
+                Payload: 000000e8000000e7000000e6000000e5
+=======================================================
+[VICUNA MEMORY] Time: 341600 ns |  READ @ Addr: 800007bc
+[VICUNA MEMORY] Time: 341800 ns |  READ @ Addr: 800007c0
+[VICUNA MEMORY] Time: 342000 ns |  READ @ Addr: 800007c4
+[VICUNA MEMORY] Time: 342200 ns |  READ @ Addr: 800007c8
+=======================================================
+[VICUNA VAULT]  Time: 342200 ns | Port 0 Wrote to v14
+                Payload: 000000ec000000eb000000ea000000e9
+=======================================================
+[VICUNA MEMORY] Time: 342400 ns |  READ @ Addr: 800007cc
+[VICUNA RETIRE] Time: 342800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 343000 ns | Port 0 Wrote to v15
+                Payload: 000000f0000000ef000000ee000000ed
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 343200 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 343400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 346400 ns | Port 0 Wrote to v16
+                Payload: 0000cb100000c9490000c7840000c5c1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 347200 ns | Port 0 Wrote to v17
+                Payload: 0000d2400000d0710000cea40000ccd9
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 348000 ns | Port 0 Wrote to v18
+                Payload: 0000d9900000d7b90000d5e40000d411
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 348800 ns | Port 0 Wrote to v19
+                Payload: 0000e1000000df210000dd440000db69
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 349000 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 349200 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 352000 ns | Port 0 Wrote to v4
+                Payload: 00042c7000041ee70004117c0004042f
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 352800 ns | Port 0 Wrote to v5
+                Payload: 000463c0000455bf000447dc00043a17
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 353600 ns | Port 0 Wrote to v6
+                Payload: 00049cf000048e770004801c000471df
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 354400 ns | Port 0 Wrote to v7
+                Payload: 0004d8000004c90f0004ba3c0004ab87
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 354600 ns | Instr: 0205e407 | VL: 16
+[VICUNA MEMORY] Time: 356400 ns |  READ @ Addr: 800003d0
+[VICUNA MEMORY] Time: 356600 ns |  READ @ Addr: 800003d4
+[VICUNA MEMORY] Time: 356800 ns |  READ @ Addr: 800003d8
+[VICUNA MEMORY] Time: 357000 ns |  READ @ Addr: 800003dc
+[VICUNA MEMORY] Time: 357200 ns |  READ @ Addr: 800003e0
+[VICUNA MEMORY] Time: 357400 ns |  READ @ Addr: 800003e4
+[VICUNA MEMORY] Time: 357600 ns |  READ @ Addr: 800003e8
+=======================================================
+[VICUNA VAULT]  Time: 357600 ns | Port 0 Wrote to v8
+                Payload: 000000f4000000f3000000f2000000f1
+=======================================================
+[VICUNA MEMORY] Time: 357800 ns |  READ @ Addr: 800003ec
+[VICUNA MEMORY] Time: 358000 ns |  READ @ Addr: 800003f0
+[VICUNA MEMORY] Time: 358200 ns |  READ @ Addr: 800003f4
+[VICUNA MEMORY] Time: 358400 ns |  READ @ Addr: 800003f8
+=======================================================
+[VICUNA VAULT]  Time: 358400 ns | Port 0 Wrote to v9
+                Payload: 000000f8000000f7000000f6000000f5
+=======================================================
+[VICUNA MEMORY] Time: 358600 ns |  READ @ Addr: 800003fc
+[VICUNA MEMORY] Time: 358800 ns |  READ @ Addr: 80000400
+[VICUNA MEMORY] Time: 359000 ns |  READ @ Addr: 80000404
+[VICUNA MEMORY] Time: 359200 ns |  READ @ Addr: 80000408
+=======================================================
+[VICUNA VAULT]  Time: 359200 ns | Port 0 Wrote to v10
+                Payload: 000000fc000000fb000000fa000000f9
+=======================================================
+[VICUNA MEMORY] Time: 359400 ns |  READ @ Addr: 8000040c
+[VICUNA RETIRE] Time: 359800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 360000 ns | Port 0 Wrote to v11
+                Payload: 00000100000000ff000000fe000000fd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 360200 ns | Instr: 02066607 | VL: 16
+[VICUNA MEMORY] Time: 362000 ns |  READ @ Addr: 800007d0
+[VICUNA MEMORY] Time: 362200 ns |  READ @ Addr: 800007d4
+[VICUNA MEMORY] Time: 362400 ns |  READ @ Addr: 800007d8
+[VICUNA MEMORY] Time: 362600 ns |  READ @ Addr: 800007dc
+[VICUNA MEMORY] Time: 362800 ns |  READ @ Addr: 800007e0
+[VICUNA MEMORY] Time: 363000 ns |  READ @ Addr: 800007e4
+[VICUNA MEMORY] Time: 363200 ns |  READ @ Addr: 800007e8
+=======================================================
+[VICUNA VAULT]  Time: 363200 ns | Port 0 Wrote to v12
+                Payload: 000000f4000000f3000000f2000000f1
+=======================================================
+[VICUNA MEMORY] Time: 363400 ns |  READ @ Addr: 800007ec
+[VICUNA MEMORY] Time: 363600 ns |  READ @ Addr: 800007f0
+[VICUNA MEMORY] Time: 363800 ns |  READ @ Addr: 800007f4
+[VICUNA MEMORY] Time: 364000 ns |  READ @ Addr: 800007f8
+=======================================================
+[VICUNA VAULT]  Time: 364000 ns | Port 0 Wrote to v13
+                Payload: 000000f8000000f7000000f6000000f5
+=======================================================
+[VICUNA MEMORY] Time: 364200 ns |  READ @ Addr: 800007fc
+[VICUNA MEMORY] Time: 364400 ns |  READ @ Addr: 80000800
+[VICUNA MEMORY] Time: 364600 ns |  READ @ Addr: 80000804
+[VICUNA MEMORY] Time: 364800 ns |  READ @ Addr: 80000808
+=======================================================
+[VICUNA VAULT]  Time: 364800 ns | Port 0 Wrote to v14
+                Payload: 000000fc000000fb000000fa000000f9
+=======================================================
+[VICUNA MEMORY] Time: 365000 ns |  READ @ Addr: 8000080c
+[VICUNA RETIRE] Time: 365400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 365600 ns | Port 0 Wrote to v15
+                Payload: 00000100000000ff000000fe000000fd
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 365800 ns | Instr: 96862857 | VL: 16
+[VICUNA RETIRE] Time: 366000 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 369000 ns | Port 0 Wrote to v16
+                Payload: 0000e8900000e6a90000e4c40000e2e1
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 369800 ns | Port 0 Wrote to v17
+                Payload: 0000f0400000ee510000ec640000ea79
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 370600 ns | Port 0 Wrote to v18
+                Payload: 0000f8100000f6190000f4240000f231
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 371400 ns | Port 0 Wrote to v19
+                Payload: 000100000000fe010000fc040000fa09
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 371600 ns | Instr: 02480257 | VL: 16
+[VICUNA RETIRE] Time: 371800 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 374600 ns | Port 0 Wrote to v4
+                Payload: 00051500000505900004f6400004e710
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 375400 ns | Port 0 Wrote to v5
+                Payload: 00055400000544100005344000052490
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 376200 ns | Port 0 Wrote to v6
+                Payload: 00059500000584900005744000056410
+=======================================================
+=======================================================
+[VICUNA VAULT]  Time: 377000 ns | Port 0 Wrote to v7
+                Payload: 0005d8000005c7100005b6400005a590
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 377200 ns | Instr: 024c2a57 | VL: 16
+[VICUNA RETIRE] Time: 377400 ns | Instruction ID 0 complete
+=======================================================
+[VICUNA VAULT]  Time: 382800 ns | Port 0 Wrote to v20
+                Payload: 0055d5800055d5800055d5800055d580
+=======================================================
+-------------------------------------------------------
+[VICUNA ISSUE]  Time: 383000 ns | Instr: 434025d7 | VL: 16
+[VICUNA RETIRE] Time: 384800 ns | Instruction ID 0 complete
+=======================================================
+[VECTOR TIMING] Result committed at  : 385400 ns
+[VECTOR TIMING] Value                : 0055d580  (expect 0055D580)
+[VECTOR TIMING] Cycles               : 1916
+=======================================================
+=======================================================
+[BENCH SUMMARY] Result (DMEM[0]) : 0055d580
+[BENCH SUMMARY] Expected         : 0055D580 (5,625,216 decimal)
+[BENCH SUMMARY] Status           : PASS
+=======================================================
+Simulation complete via $finish(1) at time 387400 NS + 0
+./rv32im_top_tb.sv:88     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on May 06, 2026 at 04:16:18 EDT  (total: 00:00:04)
+Finding user-specified file...
+./d_mem_final.hex
+[2026-05-06 08:16:18 UTC] Opening user-specified file...
+Done

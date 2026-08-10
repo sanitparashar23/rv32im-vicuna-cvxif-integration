@@ -1,0 +1,68 @@
+[2026-05-02 13:48:56 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-f' 'filelist.f' '+define+IMEM_HEX=\"i_mem.hex\"' '+define+DMEM_HEX=\"d_mem.hex\"' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on May 02, 2026 at 09:48:57 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+  adder u_pc4(
+            |
+xmelab: *W,CUVWSP (./rv32im.sv,146|12): 4 output ports were not connected:
+xmelab: (./adder.sv,9): overflow
+xmelab: (./adder.sv,10): carry
+xmelab: (./adder.sv,11): negative
+xmelab: (./adder.sv,12): zero
+
+  adder u_pcimm(
+              |
+xmelab: *W,CUVWSP (./rv32im.sv,329|14): 4 output ports were not connected:
+xmelab: (./adder.sv,9): overflow
+xmelab: (./adder.sv,10): carry
+xmelab: (./adder.sv,11): negative
+xmelab: (./adder.sv,12): zero
+
+    ) u_vicuna (
+             |
+xmelab: *W,CUVWSP (./vicuna_wrapper.sv,187|13): 4 output ports were not connected:
+xmelab: (./vproc_core.sv,51): csr_vlenb_o
+xmelab: (./vproc_core.sv,55): csr_vxrm_o
+xmelab: (./vproc_core.sv,58): csr_vxsat_o
+xmelab: (./vproc_core.sv,62): pend_vreg_wr_map_o
+
+	Top level design units:
+		my_pkg
+		$unit_0x7695c681
+		divider_1c
+		multiplier_1c
+		rv32im_top_tb
+    .opF(InstrF[6:0]),          // opcode in IF
+              |
+xmelab: *W,ENUMERR (./rv32im.sv,110|14): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    .op(InstrD[6:0]),             // Op Codes
+             |
+xmelab: *W,ENUMERR (./rv32im.sv,174|13): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+Loading snapshot worklib.divider_1c:sv .................... Done
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,PRPASZ: Packed array at "rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state" of 6535 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 6535 rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state' or 'setenv SHM_PACKED_LIMIT 6535' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_q" of 6535 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 6535 rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_q' or 'setenv SHM_PACKED_LIMIT 6535' to adjust limit.
+xmsim: *W,PRPASZ: Packed array at "rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_d" of 6535 bits exceeds limit of 4096 - not probed
+ Use 'probe -create -packed 6535 rv32im_top_tb.u_DUT.u_cpu.u_vicuna_wrapper.u_vicuna.genblk9[0].pipe.genblk2.pipeline.unpack.stage_state_d' or 'setenv SHM_PACKED_LIMIT 6535' to adjust limit.
+[IMEM] Loaded OK. IMEM[0]=80000537
+[IMEM] Loaded OK. IMEM[0]=80000537 (expect 80000537)
+=======================================================
+[SCALAR TIMING] Result committed at  : 1391000 ns
+[SCALAR TIMING] Value                : 0055d580  (expect 0055D580)
+[SCALAR TIMING] Cycles               : 6944
+=======================================================
+=======================================================
+[BENCH SUMMARY] Result (DMEM[0]) : 0055d580
+[BENCH SUMMARY] Expected         : 0055D580 (5,625,216 decimal)
+[BENCH SUMMARY] Status           : PASS
+=======================================================
+Simulation complete via $finish(1) at time 1393 US + 0
+./rv32im_top_tb.sv:95     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on May 02, 2026 at 09:49:01 EDT  (total: 00:00:04)
+Finding user-specified file...
+./d_mem_final.hex
+[2026-05-02 13:49:01 UTC] Opening user-specified file...
+Done
