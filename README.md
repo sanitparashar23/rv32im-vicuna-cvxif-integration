@@ -9,6 +9,8 @@ GPDK45nm with **0 timing violations**.
 Built as part of an M.Tech thesis on heterogeneous RISC-V compute for 5G
 PHY DSP workloads (VLSI & Embedded Systems, DIAT Pune).
 
+**[See exactly what was built vs. what's upstream IP -> CONTRIBUTIONS.md](CONTRIBUTIONS.md)**
+
 ---
 
 ## Results at a glance
