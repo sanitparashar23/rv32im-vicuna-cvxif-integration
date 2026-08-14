@@ -47,6 +47,8 @@ Thumbs.db
 .idea/
 
 # Python (if you use scripts for automation)
-__pycache__/
-*.pyc
+__pycache__/ *.pyc 
 .ipynb_checkpoints/
+
+!synth/reports/*.rpt
+!synth/*.log
