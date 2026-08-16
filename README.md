@@ -127,6 +127,8 @@ Full breakdown, including diagram attributions:
 | [`docs/debug-notes.md`](docs/debug-notes.md) | RTL-verified bug writeups: X-propagation, `vredsum` race, port-count mismatch, and the scalar-bypass mechanism |
 | [`docs/waveforms/`](docs/waveforms/) | Captioned Xcelium waveform screenshots proving the mechanisms described above |
 | [`synth/README.md`](synth/README.md) | Full synthesis methodology, results, and honest discussion of memory-implementation limitations |
+| [`docs/future-work-analysis.md`](docs/future-work-analysis.md) | Cygnus/Ara silicon comparison, eMBB/URLLC dual-domain roadmap, CLA/multiplier/divider tradeoffs |
+| [`docs/5g-phy-scaling-estimate.md`](docs/5g-phy-scaling-estimate.md) | Literature-grounded MAC throughput target vs. achieved, honest gap analysis |
 
 ---
 
