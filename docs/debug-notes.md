@@ -259,3 +259,80 @@ This integration revealed hazard classes that the CV-X-IF protocol does
 | `rtl/integration/vproc_core.sv` | Bug 4 fix, self-documented in code comments |
 | `rtl/integration/vproc_config.sv` | `PIPE_VPORT_CNT=1` working configuration (Bug 4) |
 | `rtl/scalar_core/d_mem.sv` | Word-indexed memory model (Bug 2 context) |
+
+---
+
+### Bug 5: Stale `v_mem_rdata` from a one-cycle-late capture racing the memory arbiter
+
+**Symptom:** silent data corruption, not an X or a visible stall. `vle32.v`
+loads for array B returned zero for elements after the first, so the
+resulting dot product wrote `0x00000000` to memory instead of the correct
+value -- discovered during the earliest 4-element dot-product development,
+before the 256-element kernel existed.
+
+**Root cause:** the shared memory address mux in `rv32im_top.sv` is purely
+combinational:
+```systemverilog
+shared_addr = v_mem_valid ? v_mem_addr : ALUResult;
+```
+`d_mem.sv`'s read (`RD`) is also purely combinational. This means
+`v_mem_rdata` only points at the word Vicuna actually requested for
+exactly the cycle `v_mem_valid` is asserted. An initial implementation
+captured this data one cycle later than the handshake, by which point the
+arbiter had already reverted `shared_addr` to the scalar core's
+`ALUResult` (since Vicuna had already de-asserted `v_mem_valid` to prepare
+the next element's address). The captured data was therefore whatever the
+scalar pipeline's stalled `ALUResult` happened to resolve to -- in
+practice, frequently a read of `DMEM[0]`.
+
+**Fix -- verified present in `rtl/integration/vicuna_wrapper.sv`, in the
+block the author's own comments label `"THE 1-CYCLE PIPELINE FIX"`:**
+```systemverilog
+logic [0:0]  mem_id_q;
+logic        mem_valid_q;
+logic [31:0] mem_rdata_q;
+
+always_ff @(posedge clk or posedge reset) begin
+    if (reset) begin
+        mem_valid_q <= 1'b0;
+        mem_id_q    <= '0;
+        mem_rdata_q <= '0;
+    end else begin
+        // Drive the result valid signal one cycle later to satisfy Vicuna
+        mem_valid_q <= xif.mem_valid;
+
+        // CRITICAL FIX: Capture the combinational data EXACTLY when requested,
+        // before the Arbiter steals the address bus back next cycle.
+        if (xif.mem_valid) begin
+            mem_rdata_q <= v_mem_rdata;
+            mem_id_q    <= xif.mem_req.id;
+        end
+    end
+end
+```
+The fix moves the data capture to the *same* cycle as the handshake
+(`if (xif.mem_valid)`), not one cycle later, so `mem_rdata_q` latches the
+correct word before the arbiter has any chance to reassign the shared
+address bus. `mem_valid_q` (the result-valid pulse presented back to
+Vicuna) is still correctly registered one cycle later, satisfying
+Vicuna's expected handshake timing -- only the *data* capture needed to
+move earlier, not the valid pulse.
+
+**Note on evidence:** no surviving log captures this bug in its broken
+state -- by the time 4-element runs were being logged, this fix was
+already in place (see `sim/logs/log_xrun_4ele_array_dot.txt`, which shows
+a fully correct run: `v1`/`v2` vault-writes show correct unstaled data
+`[4,3,2,1]`/`[5,4,3,2]`, and the final result matches expected). This bug
+is documented from the author's direct recollection and cross-checked
+directly against the fix's presence and structure in the current RTL,
+rather than from a runtime capture of the failure itself.
+
+**Note on design history:** the author recalls that the first attempted
+fix used a two-stage capture pipeline (separate valid/id/data registers
+staged across two cycles) before arriving at the single-stage version
+above. The two-stage version introduced an extra cycle of result latency
+that was not acceptable, and was replaced with the current single-stage
+capture, which fixes the data race without adding the extra cycle. The
+two-stage version does not exist in the current RTL and is not
+independently verifiable -- this history is included for completeness
+of the debugging narrative, not as a verified claim.
